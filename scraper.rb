@@ -3,7 +3,7 @@
 
 require 'wikidata/fetcher'
 
-@pages = [
+pages = [
   'Categoría:Diputados del XLVIII Periodo Legislativo del Congreso Nacional de Chile',
   'Categoría:Diputados del XLIX Período Legislativo del Congreso Nacional de Chile',
   'Categoría:Diputados del L Periodo Legislativo del Congreso Nacional de Chile',
@@ -13,5 +13,7 @@ require 'wikidata/fetcher'
   'Categoría:Diputados del LIV Periodo Legislativo del Congreso Nacional de Chile',
 ]
 
-names = @pages.map { |c| WikiData::Category.new(c, 'es').member_titles }.flatten.uniq
-EveryPolitician::Wikidata.scrape_wikidata(names: { es: names })
+ids = %w(Q29044330)
+
+names = pages.map { |c| WikiData::Category.new(c, 'es').member_titles }.flatten.uniq
+EveryPolitician::Wikidata.scrape_wikidata(ids: ids, names: { es: names })
