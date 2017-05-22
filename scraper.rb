@@ -13,7 +13,20 @@ pages = [
   'Categoría:Diputados del LIV Periodo Legislativo del Congreso Nacional de Chile',
 ]
 
-ids = %w(Q29044330)
+# Find all P39s of the 8th Period
+query = <<EOS
+  SELECT DISTINCT ?item
+  WHERE
+  {
+    VALUES ?membership { wd:Q18067639 }
+    VALUES ?term { wd:Q29044335 }
+
+    ?item p:P39 ?position_statement .
+    ?position_statement ps:P39 ?membership .
+    ?position_statement pq:P2937 ?term .
+  }
+EOS
+p39s = EveryPolitician::Wikidata.sparql(query)
 
 names = pages.map { |c| WikiData::Category.new(c, 'es').member_titles }.flatten.uniq
-EveryPolitician::Wikidata.scrape_wikidata(ids: ids, names: { es: names })
+EveryPolitician::Wikidata.scrape_wikidata(ids: p39s, names: { es: names })
