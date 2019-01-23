@@ -7,10 +7,10 @@ pages = [
   'Categoría:Diputados del XLVIII Periodo Legislativo del Congreso Nacional de Chile',
   'Categoría:Diputados del XLIX Período Legislativo del Congreso Nacional de Chile',
   'Categoría:Diputados del L Periodo Legislativo del Congreso Nacional de Chile',
-  'Categoría:Diputados del LI Periodo Legislativo del Congreso Nacional de Chile',
-  'Categoría:Diputados del LII Periodo Legislativo del Congreso Nacional de Chile',
-  'Categoría:Diputados del LIII Periodo Legislativo del Congreso Nacional de Chile',
-  'Categoría:Diputados del LIV Periodo Legislativo del Congreso Nacional de Chile',
+  'Categoría:Diputados del LI Período Legislativo del Congreso Nacional de Chile',
+  'Categoría:Diputados del LII Período Legislativo del Congreso Nacional de Chile',
+  'Categoría:Diputados del LIII Período Legislativo del Congreso Nacional de Chile',
+  'Categoría:Diputados del LIV Período Legislativo del Congreso Nacional de Chile',
 ]
 
 # Find all P39s of the 8th Period
