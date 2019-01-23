@@ -15,16 +15,7 @@ pages = [
 
 # Find all P39s of the 8th Period
 query = <<EOS
-  SELECT DISTINCT ?item
-  WHERE
-  {
-    VALUES ?membership { wd:Q18067639 }
-    VALUES ?term { wd:Q29044335 }
-
-    ?item p:P39 ?position_statement .
-    ?position_statement ps:P39 ?membership .
-    ?position_statement pq:P2937 ?term .
-  }
+  SELECT DISTINCT ?item WHERE { ?item p:P39 [ ps:P39 wd:Q18067639 ; pq:P2937 wd:Q16493941 ] }
 EOS
 p39s = EveryPolitician::Wikidata.sparql(query)
 
